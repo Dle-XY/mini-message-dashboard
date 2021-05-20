@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  h1 Mini Messageboard
+  p A new message of
+
+   form(method='POST', action='/new')
+        .form-group
+        input(type="text" class="form-control" name="author" placehoder="Author")
+        textarea(name="message" class="form-control")
+        input(type="submit" value="Envoyer")
+
+  

@@ -1,0 +1,14 @@
+
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  
+    a( class="btn btn-primary", href="/new") New Message
+    each msg in messages
+      .card.border-primary.mb-3 
+        .card-header
+          h5.text-success= msg.author
+          .card-body.text-dark
+           p.card-body.text-dark= msg.message
